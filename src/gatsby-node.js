@@ -3,7 +3,7 @@ exports.onCreateWebpackConfig = (
   { plugins, ...elmOptions }
 ) => {
   const { setWebpackConfig } = actions
-  const isDev = stage === `develop`
+  const isDev = stage === 'develop'
 
   const elmLoader = {
     loader: require.resolve('elm-webpack-loader'),
