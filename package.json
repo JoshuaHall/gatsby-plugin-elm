@@ -51,9 +51,9 @@
   },
   "dependencies": {
     "elm-hot-webpack-loader": "1.1.8",
-    "elm-webpack-loader": "7.0.1"
+    "elm-webpack-loader": "git+https://github.com/elm-community/elm-webpack-loader.git#bbce36b13c7cc9c1a4595fc573d6c7414d100826"
   },
   "peerDependencies": {
-    "gatsby": "^3.0.0"
+    "gatsby": "^3.0.2"
   }
 }
