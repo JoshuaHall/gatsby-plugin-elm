@@ -54,6 +54,6 @@
     "elm-webpack-loader": "7.0.1"
   },
   "peerDependencies": {
-    "gatsby": ">3.0.1"
+    "gatsby": "^3.0.0"
   }
 }
