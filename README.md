@@ -4,12 +4,12 @@ Provides compiler support for Elm in gatsby.
 
 ## Install
 
-`npm install --save gatsby-plugin-elm`
+`npm install --save-dev JoshuaHall/gatsby-plugin-elm`
 
 ## How to use
 
-1.  Include the plugin in your `gatsby-config.js` file.
-2.  Write your Elm files as normal and import the Main file as seen in this [example](https://github.com/elm-community/elm-webpack-loader/blob/master/example-wp4/src/index.js).
+1. Include the plugin in your `gatsby-config.js` file.
+2. Write your Elm files as normal and import the Main file as seen in this [example](https://github.com/elm-community/elm-webpack-loader/blob/master/example-wp4/src/index.js).
 
 ```javascript
 // in gatsby-config.js
@@ -23,7 +23,7 @@ for all available options.
 // in gatsby-config.js
 plugins: [
   {
-    resolve: `gatsby-plugin-sass`,
+    resolve: `gatsby-plugin-elm`,
     options: {
       forceWatch: true,
     },
@@ -33,7 +33,7 @@ plugins: [
 
 ### Default Options For Develop and Build
 
-Since Gatsby has clear development and production modes this plugin sets some default behaviors depending on which is running:
+Gatsby has clear development and production modes this plugin sets some default behaviors depending on which is running:
 
 #### Default Develop Options
 
