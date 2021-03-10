@@ -2,13 +2,12 @@ import type { GatsbyNode } from "gatsby";
 
 export const onCreateWebpackConfig: GatsbyNode["onCreateWebpackConfig"] = (
   { actions, stage },
-  // @ts-ignore
-  { plugins, ...elmOptions }
+  { ...elmOptions }
 ) => {
   const isDev = stage === "develop";
 
   const elmLoader = {
-    loader: require.resolve("elm-webpack-loader"),
+    loader: "elm-webpack-loader",
     options: {
       debug: isDev,
       forceWatch: isDev,

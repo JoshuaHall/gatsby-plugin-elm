@@ -23,16 +23,12 @@ var __rest = (this && this.__rest) || function (s, e) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.onCreateWebpackConfig = void 0;
-var onCreateWebpackConfig = function (_a, 
-// @ts-ignore
-_b) {
+var onCreateWebpackConfig = function (_a, _b) {
     var actions = _a.actions, stage = _a.stage;
-    var plugins = _b.plugins, elmOptions = __rest(_b, 
-    // @ts-ignore
-    ["plugins"]);
+    var elmOptions = __rest(_b, []);
     var isDev = stage === "develop";
     var elmLoader = {
-        loader: require.resolve("elm-webpack-loader"),
+        loader: "elm-webpack-loader",
         options: __assign({ debug: isDev, forceWatch: isDev, optimize: !isDev }, elmOptions),
     };
     var elmRule = {
