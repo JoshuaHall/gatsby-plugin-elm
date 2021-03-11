@@ -27,14 +27,11 @@ var onCreateWebpackConfig = function (_a, _b) {
     var actions = _a.actions, stage = _a.stage;
     var elmOptions = __rest(_b, []);
     var isDev = stage === "develop";
-    var elmLoader = {
-        loader: "elm-webpack-loader",
-        options: __assign({ debug: isDev, forceWatch: isDev, optimize: !isDev }, elmOptions),
-    };
     var elmRule = {
         test: /\.elm$/,
         exclude: [/[/\\\\]elm-stuff[/\\\\]/, /[/\\\\]node_modules[/\\\\]/],
-        loader: elmLoader,
+        loader: "elm-webpack-loader",
+        options: __assign({ debug: isDev, forceWatch: isDev, optimize: !isDev }, elmOptions),
     };
     actions.setWebpackConfig({
         module: {
