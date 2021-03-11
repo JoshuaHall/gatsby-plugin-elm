@@ -6,7 +6,9 @@ export const onCreateWebpackConfig: GatsbyNode["onCreateWebpackConfig"] = (
 ) => {
   const isDev = stage === "develop";
 
-  const elmLoader = {
+  const elmRule = {
+    test: /\.elm$/,
+    exclude: [/[/\\\\]elm-stuff[/\\\\]/, /[/\\\\]node_modules[/\\\\]/],
     loader: "elm-webpack-loader",
     options: {
       debug: isDev,
@@ -14,12 +16,6 @@ export const onCreateWebpackConfig: GatsbyNode["onCreateWebpackConfig"] = (
       optimize: !isDev,
       ...elmOptions,
     },
-  };
-
-  const elmRule = {
-    test: /\.elm$/,
-    exclude: [/[/\\\\]elm-stuff[/\\\\]/, /[/\\\\]node_modules[/\\\\]/],
-    loader: elmLoader,
   };
 
   actions.setWebpackConfig({
